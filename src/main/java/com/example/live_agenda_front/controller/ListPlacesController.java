@@ -3,6 +3,7 @@ package com.example.live_agenda_front.controller;
 import com.example.live_agenda_front.dto.PlaceDTO;
 import com.example.live_agenda_front.service.PlaceService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
@@ -17,10 +18,11 @@ public class ListPlacesController {
     }
 
     @GetMapping("/list-places")
-    public String showListPlacesPage(){
+    public String showListPlacesPage(Model model){
+        // Model jest kontenerem w ktorym  wstawiamy obiekty/dane aby miec do nich dostep w widoku (html) MVC!
 
-        List<PlaceDTO> placesList = placeService.getPlaces();
-
+        PlaceDTO [] places = placeService.getPlaces();
+        model.addAttribute("places", places);
         return "list-places.html";
     }
 

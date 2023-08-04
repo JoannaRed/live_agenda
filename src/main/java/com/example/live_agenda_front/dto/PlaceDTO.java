@@ -7,6 +7,15 @@ public class PlaceDTO {
     private String address;
     private String description;
 
+    public PlaceDTO() {
+    }
+
+    public PlaceDTO(String name, String address, String description) {
+        this.name = name;
+        this.address = address;
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "PlaceDTO{" +

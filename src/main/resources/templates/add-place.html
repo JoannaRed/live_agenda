@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodaj Miejsce</title>
+</head>
+<body>
+<form action="/add-place" method="post">
+  <label for="nazwa">Nazwa:</label>
+  <input type="text" id="nazwa" name="name" required>
+  <br><br>
+
+  <label for="adres">Adres:</label>
+  <input type="text" id="adres" name="address" required>
+  <br><br>
+
+  <label for="opis">Opis:</label>
+  <textarea id="opis" name="description" rows="4" cols="50" required></textarea>
+  <br><br>
+
+  <input type="submit" value="Dodaj Miejsce">
+</form>
+</body>
+</html>

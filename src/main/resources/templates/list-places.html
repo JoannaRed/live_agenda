@@ -19,29 +19,16 @@
 <h2>Lista Miejsc</h2>
 <table>
     <tr>
-        <th>ID</th>
         <th>Nazwa</th>
         <th>Adres</th>
         <th>Opis</th>
     </tr>
-    <tr>
-        <td>1</td>
-        <td>Przykładowe miejsce 1</td>
-        <td>Adres 1</td>
-        <td>To jest opis przykładowego miejsca 1.</td>
+    <tr th:each="place:${places}">
+        <td th:text="${place.name}"></td>
+        <td th:text="${place.address}"></td>
+        <td th:text="${place.description}"></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>Przykładowe miejsce 2</td>
-        <td>Adres 2</td>
-        <td>To jest opis przykładowego miejsca 2.</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Przykładowe miejsce 3</td>
-        <td>Adres 3</td>
-        <td>To jest opis przykładowego miejsca 3.</td>
-    </tr>
+
 </table>
 
 <a href="/"> BACK </a>

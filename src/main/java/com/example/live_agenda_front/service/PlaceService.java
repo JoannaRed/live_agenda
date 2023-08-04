@@ -17,14 +17,13 @@ public class PlaceService {
         this.restTemplate = restTemplate;
     }
 
-    public List<PlaceDTO> getPlaces() {
+    public PlaceDTO [] getPlaces() {
 
         PlaceDTO [] places = restTemplate.getForObject("http://localhost:8080/api/places", PlaceDTO[].class);
-        for (PlaceDTO place : places) {
-            System.out.println(place);
-        }
-        return new ArrayList<>();
+        return places;
 
-
+    }
+    public void addPlace(PlaceDTO newPlace) {
+        restTemplate.postForObject("http://localhost:8080/api/places", newPlace, PlaceDTO.class);
     }
 }
