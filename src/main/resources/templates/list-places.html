@@ -22,11 +22,15 @@
         <th>Nazwa</th>
         <th>Adres</th>
         <th>Opis</th>
+        <th>Ocena</th>
+
     </tr>
     <tr th:each="place:${places}">
         <td th:text="${place.name}"></td>
         <td th:text="${place.address}"></td>
         <td th:text="${place.description}"></td>
+        <td th:text="${place.score}"></td>
+
     </tr>
 
 </table>
