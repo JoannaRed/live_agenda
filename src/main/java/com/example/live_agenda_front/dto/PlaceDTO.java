@@ -6,14 +6,16 @@ public class PlaceDTO {
     private String name;
     private String address;
     private String description;
+    private Integer score;
 
     public PlaceDTO() {
     }
 
-    public PlaceDTO(String name, String address, String description) {
+    public PlaceDTO(String name, String address, String description, Integer score) {
         this.name = name;
         this.address = address;
         this.description = description;
+        this.score = score;
     }
 
     @Override
@@ -22,6 +24,7 @@ public class PlaceDTO {
                 "name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", description='" + description + '\'' +
+                ", score='" + score + '\'' +
                 '}';
     }
 
@@ -35,5 +38,9 @@ public class PlaceDTO {
 
     public String getDescription() {
         return description;
+    }
+
+    public Integer getScore() {
+        return score;
     }
 }

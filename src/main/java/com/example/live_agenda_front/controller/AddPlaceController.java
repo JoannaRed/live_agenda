@@ -28,9 +28,11 @@ public class AddPlaceController {
     public String addPlace(
             String name,
             String address,
-            String description)
+            String description,
+            Integer score)
     {
-        PlaceDTO newPlace = new PlaceDTO(name, address, description);
+        PlaceDTO newPlace = new PlaceDTO(name, address, description, score);
+        System.out.println(newPlace);
         placeService.addPlace(newPlace);
 
         return "index.html"; // Nazwa pliku HTML wyświetlającego wynik
