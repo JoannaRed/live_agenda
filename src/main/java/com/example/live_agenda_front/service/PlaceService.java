@@ -24,6 +24,7 @@ public class PlaceService {
 
     }
     public void addPlace(PlaceDTO newPlace) {
-        restTemplate.postForObject("http://localhost:8080/api/places", newPlace, PlaceDTO.class);
+        restTemplate.postForEntity("http://localhost:8080/api/places", newPlace, PlaceDTO.class);
+
     }
 }
